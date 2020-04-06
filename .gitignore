@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Photoshop layot files
+*.psd
+
+# Prettierrc.json
+*.prettierrc.json
