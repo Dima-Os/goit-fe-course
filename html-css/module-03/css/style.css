@@ -1,31 +1,68 @@
-/* font-family: 'Playfair Display',
-serif; */
 /* font-family: 'Ubuntu',
 sans-serif; */
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
+
+  outline: 1px solid black;
+}
+body {
+  margin: 0 auto;
+  width: 900px;
+  background-color: rosybrown;
+  padding-top: 72px;
 }
 
+.navigation-menu {
+  background-color: skyblue;
+  text-align: center;
+}
+.navigation-menu-item {
+  display: inline-block;
+}
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: #626262;
+}
+
+.navigation-menu-item:not(:last-child) {
+  margin-right: 106px;
+}
+.articles-list {
+  font-size: 0px;
+  padding-top: 98px;
+}
+
+.articles-list-item {
+  font-size: 14px;
+  width: 420px;
+  display: inline-block;
+}
+.articles-list-item:not(:nth-of-type(2n)) {
+  margin-right: 60px;
+}
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
+  white-space: nowrap;
 
-    white-space: nowrap;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
