@@ -42,14 +42,16 @@ body {
 }
 .articles-list {
   font-size: 0px;
-  padding-top: 98px;
+  /* padding-top: 96px; */
 }
 
 .articles-list-item {
-  font-size: 14px;
+  padding-top: 96px;
   width: 420px;
   display: inline-block;
+  margin-bottom: 32px;
 }
+
 .articles-list-item:not(:nth-of-type(2n)) {
   margin-right: 60px;
 }
@@ -58,9 +60,22 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   color: #b4ad9e;
-  line-height: 18px;
+  line-height: 16px;
+  font-size: 14px;
+  padding-top: 28px;
 }
-
+.article-header {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  padding-top: 20px;
+}
+.article {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 30px;
+}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
