@@ -1,8 +1,6 @@
-/* font-family: 'Ubuntu',
-sans-serif; */
 html {
   box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 *,
@@ -15,12 +13,10 @@ html {
 body {
   margin: 0 auto;
   width: 900px;
-  background-color: rosybrown;
   padding-top: 72px;
 }
 
 .navigation-menu {
-  background-color: skyblue;
   text-align: center;
 }
 .navigation-menu-item {
@@ -31,7 +27,14 @@ body {
   text-decoration: none;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 400;
   color: #626262;
+}
+.nav-link:hover {
+  color: #03a9f4;
+}
+.nav-link:focus {
+  color: #03a9f4;
 }
 
 .navigation-menu-item:not(:last-child) {
@@ -50,9 +53,17 @@ body {
 .articles-list-item:not(:nth-of-type(2n)) {
   margin-right: 60px;
 }
+.image-caption {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #b4ad9e;
+  line-height: 18px;
+}
+
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
