@@ -43,23 +43,36 @@ html {
 .articles-list {
   font-size: 0px;
   text-align: left;
+<<<<<<< HEAD
   /* padding-bottom: 18px; */
+=======
+  padding-bottom: 18px;
+>>>>>>> ee5f068dc101790b6e33d2b4d43d27727f0479aa
 }
 
 .articles-list-item {
   width: 420px;
   display: inline-block;
+<<<<<<< HEAD
   padding-bottom: 132px;
+=======
+  padding-bottom: 32px;
+>>>>>>> ee5f068dc101790b6e33d2b4d43d27727f0479aa
 }
 
 .articles-list-item:not(:nth-of-type(2n)) {
   margin-right: 60px;
 }
+<<<<<<< HEAD
 .articles-list-item:nth-last-child(-n + 2) {
   padding-bottom: 50px;
 }
 img {
   margin-bottom: 28px;
+=======
+img {
+  padding-bottom: 28px;
+>>>>>>> ee5f068dc101790b6e33d2b4d43d27727f0479aa
 }
 .image-caption {
   font-family: "Ubuntu", sans-serif;
@@ -80,7 +93,10 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+<<<<<<< HEAD
   /* padding-bottom: 94px; */
+=======
+>>>>>>> ee5f068dc101790b6e33d2b4d43d27727f0479aa
 }
 .button {
   padding-bottom: 72px;
