@@ -108,3 +108,6 @@ dist
 
 # Prettierrc.json
 *.prettierrc.json
+
+#explanation.txt explanation for home works 
+explanation.txt
