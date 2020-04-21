@@ -1,6 +1,106 @@
-/* font-family: 'Roboto',
-sans-serif;
-
-font-family: 'Open Sans',
+/* font-family: 'Open Sans',
 sans-serif; */
-і
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  /* color: black; */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* outline: 1px solid black; */
+}
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+
+  /* HEADER */
+}
+nav {
+  padding: 34px 0 100px;
+}
+.logo {
+  float: left;
+  /* background-color: teal; */
+  font-size: 30px;
+  line-height: 32px;
+  color: #555252;
+}
+.logo::first-letter {
+  font-weight: 900;
+  color: #1abc9c;
+}
+
+.navigation-menu-item {
+  margin-top: 6px;
+  float: left;
+  /* background-color: violet; */
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  /* color: #0f0101; */
+}
+.navigation-menu-item > a {
+  color: #0f0101;
+}
+.navigation-menu-item:not(:last-child) {
+  margin-right: 32px;
+}
+.navigation-menu-item > a:hover {
+  color: #1abc9c;
+}
+.navigation-menu {
+  float: right;
+  width: 460px;
+  /* background-color: blue; */
+}
+
+/* MAIN  */
+
+.products {
+  text-align: center;
+}
+h2 {
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: #515151;
+  font-weight: 900;
+}
+
+/* VISUALLY HIDDEN */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CLEARFIX */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
