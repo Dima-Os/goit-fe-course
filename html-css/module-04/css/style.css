@@ -5,16 +5,18 @@ html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
 a {
   text-decoration: none;
-  /* color: black; */
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  /* outline: 1px solid black; */
+  outline: 1px solid black;
 }
+
 img {
   display: block;
   height: auto;
@@ -27,9 +29,11 @@ img {
 
   /* HEADER */
 }
+
 nav {
-  padding: 34px 0 100px;
+  padding: 34px 0 86px;
 }
+
 .logo {
   float: left;
   /* background-color: teal; */
@@ -37,6 +41,7 @@ nav {
   line-height: 32px;
   color: #555252;
 }
+
 .logo::first-letter {
   font-weight: 900;
   color: #1abc9c;
@@ -52,15 +57,19 @@ nav {
   text-transform: uppercase;
   /* color: #0f0101; */
 }
-.navigation-menu-item > a {
+
+.navigation-menu-item>a {
   color: #0f0101;
 }
+
 .navigation-menu-item:not(:last-child) {
   margin-right: 32px;
 }
-.navigation-menu-item > a:hover {
+
+.navigation-menu-item>a:hover {
   color: #1abc9c;
 }
+
 .navigation-menu {
   float: right;
   width: 460px;
@@ -69,16 +78,25 @@ nav {
 
 /* MAIN  */
 
-.products {
-  text-align: center;
-}
 h2 {
+  text-align: center;
   font-size: 48px;
   line-height: 58px;
   text-transform: uppercase;
   color: #515151;
   font-weight: 900;
+  /* margin-bottom: 10px; */
 }
+
+h2::after {
+  content: "";
+  display: block;
+  background-color: #1abc9c;
+  height: 7px;
+  width: 167px;
+  margin: 18px auto 0;
+}
+
 
 /* VISUALLY HIDDEN */
 .visually-hidden:not(:focus):not(:active),
