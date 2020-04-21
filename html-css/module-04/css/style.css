@@ -14,7 +14,7 @@ a {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 img {
@@ -50,12 +50,10 @@ nav {
 .navigation-menu-item {
   margin-top: 6px;
   float: left;
-  /* background-color: violet; */
   font-size: 14px;
   line-height: 18px;
   font-weight: 900;
   text-transform: uppercase;
-  /* color: #0f0101; */
 }
 
 .navigation-menu-item>a {
@@ -85,7 +83,6 @@ h2 {
   text-transform: uppercase;
   color: #515151;
   font-weight: 900;
-  /* margin-bottom: 10px; */
 }
 
 h2::after {
@@ -97,6 +94,29 @@ h2::after {
   margin: 18px auto 0;
 }
 
+.card-list-item {
+  float: left;
+}
+
+.img-link {
+  background-color: #e9f0fd;
+}
+
+.card-list-item:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+h3 {
+  float: left;
+}
+
+.price-link {
+  background-color: #323232;
+}
+
+.price {
+  float: right;
+}
 
 /* VISUALLY HIDDEN */
 .visually-hidden:not(:focus):not(:active),
