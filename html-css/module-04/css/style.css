@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -78,7 +78,7 @@ h2 {
 }
 
 h2::after {
-  content: '';
+  content: "";
   display: block;
   background-color: #1abc9c;
   height: 7px;
@@ -96,6 +96,7 @@ h2::after {
 
 .card-wrapper {
   background-color: #e9f0fd;
+  width: 255px;
 }
 
 .card-list-item:not(:nth-child(4n)) {
@@ -112,7 +113,6 @@ h2::after {
 
 .price-link {
   display: block;
-  width: 255px;
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
@@ -136,7 +136,7 @@ h2::after {
 }
 
 .price::before {
-  content: '\0024';
+  content: "\0024";
 }
 
 .section-news {
@@ -144,7 +144,7 @@ h2::after {
 }
 
 .blog-item {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #555252;
   width: 350px;
   float: left;
@@ -166,7 +166,7 @@ h2::after {
 }
 
 .blog-item-heading::after {
-  content: '';
+  content: "";
   display: block;
   background-color: #1abc9c;
   height: 3px;
@@ -177,7 +177,7 @@ h2::after {
 .blog-article {
   font-size: 14px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -200,8 +200,8 @@ h2::after {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -217,7 +217,7 @@ input[type='radio'].visually-hidden {
 }
 
 .clearfix::after {
-  content: '';
+  content: "";
   clear: both;
   display: table;
 }
