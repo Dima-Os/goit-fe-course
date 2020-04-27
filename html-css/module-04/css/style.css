@@ -55,7 +55,7 @@ nav {
   margin-right: 32px;
 }
 
-.navigation-menu-item > a:hover {
+.navigation-menu-item>a:hover {
   color: #1abc9c;
 }
 
