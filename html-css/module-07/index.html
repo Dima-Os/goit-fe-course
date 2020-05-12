@@ -74,42 +74,42 @@
             <ul class="input-list">
               <li class="input-list-item">
                 <input
+                  class="contact-form-input"
                   minlength="3"
                   required
                   type="text"
                   name="user-name"
-                  id=""
                   placeholder="Your Name*"
                 />
               </li>
               <li class="input-list-item">
                 <input
+                  class="contact-form-input"
                   required
                   type="email"
                   name="user-email"
-                  id=""
                   placeholder="Your E-mail *"
                 />
               </li>
               <li class="input-list-item">
                 <input
+                  class="contact-form-input"
                   type="text"
                   name="user-subject"
-                  id=""
                   placeholder="Subject"
                 />
               </li>
             </ul>
             <textarea
+              class="contact-form-input"
               required
               name="user-message"
-              id=""
-              cols="30"
-              rows="10"
               placeholder="Your message *"
+              minlength="5"
+              maxlength="160"
             ></textarea>
           </div>
-          <button type="submit">Send Message</button>
+          <button class="submit-btn" type="submit">Send Message</button>
         </form>
       </section>
     </main>

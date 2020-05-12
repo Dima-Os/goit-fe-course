@@ -1,67 +1,67 @@
 /* montserrat-regular - latin */
 @font-face {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: local("Montserrat Regular"), local("Montserrat-Regular"),
-    url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+    url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
+      url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* montserrat-700 - latin */
 @font-face {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"),
-    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+      url('../fonts/montserrat-v14-latin-700.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* inria-serif-300italic - latin */
 @font-face {
-  font-family: "Inria Serif";
+  font-family: 'Inria Serif';
   font-style: italic;
   font-weight: 300;
-  src: local("Inria Serif Light Italic"), local("InriaSerif-LightItalic"),
-    url("../fonts/inria-serif-v1-latin-300italic.woff2") format("woff2"),
+  src: local('Inria Serif Light Italic'), local('InriaSerif-LightItalic'),
+    url('../fonts/inria-serif-v1-latin-300italic.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/inria-serif-v1-latin-300italic.woff") format("woff");
+      url('../fonts/inria-serif-v1-latin-300italic.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-slab-regular - latin */
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
+  src: local(''),
+    url('../fonts/roboto-slab-v11-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff");
+      url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* arizonia-regular - latin */
 @font-face {
-  font-family: "Arizonia";
+  font-family: 'Arizonia';
   font-style: normal;
   font-weight: 400;
-  src: local("Arizonia Regular"), local("Arizonia-Regular"),
-    url("../fonts/arizonia-v10-latin-regular.woff2") format("woff2"),
+  src: local('Arizonia Regular'), local('Arizonia-Regular'),
+    url('../fonts/arizonia-v10-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/arizonia-v10-latin-regular.woff") format("woff");
+      url('../fonts/arizonia-v10-latin-regular.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 :root {
-  --main-font: "Montserrat";
+  --main-font: 'Montserrat';
   --main-color: #222222;
-  --secondary-font: "Roboto Slab";
+  --secondary-font: 'Roboto Slab';
   --secondary-color: #777777;
 }
 
@@ -95,10 +95,19 @@ ul,
 ol {
   list-style: none;
 }
+textarea,
+input:focus {
+  outline: none;
+}
+button {
+  border: none;
+  /* background-color: transparent; */
+  cursor: pointer;
+}
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -130,7 +139,7 @@ input[type="radio"].visually-hidden {
 
 .site-logo {
   padding-left: 6px;
-  font-family: "Arizonia";
+  font-family: 'Arizonia';
   line-height: 1.5;
   font-size: 2.625rem;
   letter-spacing: -1px;
@@ -171,7 +180,7 @@ main {
   text-transform: uppercase;
 }
 .section-description {
-  font-family: "Inria Serif";
+  font-family: 'Inria Serif';
   font-size: 1.125rem;
   line-height: 1.2;
   margin-bottom: 76px;
@@ -186,7 +195,7 @@ main {
   flex-basis: 290px;
 }
 .services-list-item::before {
-  content: "";
+  content: '';
   display: block;
   width: 73px;
   height: 73px;
@@ -222,7 +231,7 @@ main {
   background-color: var(--main-color);
   background-image: url(../img/map-image.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom 20px;
 }
 
 .contact-us > .section-heading {
@@ -236,7 +245,42 @@ main {
 .contact-form-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
-.input-list {
-  flex-basis: 457px;
+
+.input-list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contact-form-input {
+  display: block;
+  width: 455px;
+  padding: 13px 20px 13px;
+  border-radius: 2px;
+  border: 2px solid rgb(204, 204, 204);
+}
+.contact-form-input::placeholder {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #bbbbbb;
+}
+.contact-form-input:required:focus:valid {
+  border: 2px solid #84ff00;
+}
+.contact-form-input:required:focus:invalid:not(:placeholder-shown) {
+  border: 2px solid #ff0000;
+}
+.submit-btn {
+  width: 240px;
+  height: 65px;
+  border-radius: 3px;
+  background-color: rgb(254, 209, 54);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+textarea {
+  resize: none;
 }
