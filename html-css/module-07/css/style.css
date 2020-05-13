@@ -6,7 +6,7 @@
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
     url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
+    url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -18,7 +18,7 @@
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
     url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+    url('../fonts/montserrat-v14-latin-700.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -30,7 +30,7 @@
   src: local('Inria Serif Light Italic'), local('InriaSerif-LightItalic'),
     url('../fonts/inria-serif-v1-latin-300italic.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/inria-serif-v1-latin-300italic.woff') format('woff');
+    url('../fonts/inria-serif-v1-latin-300italic.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -42,7 +42,7 @@
   src: local(''),
     url('../fonts/roboto-slab-v11-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff');
+    url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -54,7 +54,7 @@
   src: local('Arizonia Regular'), local('Arizonia-Regular'),
     url('../fonts/arizonia-v10-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/arizonia-v10-latin-regular.woff') format('woff');
+    url('../fonts/arizonia-v10-latin-regular.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -95,10 +95,12 @@ ul,
 ol {
   list-style: none;
 }
+
 textarea,
 input:focus {
   outline: none;
 }
+
 button {
   border: none;
   /* background-color: transparent; */
@@ -171,14 +173,17 @@ input[type='radio'].visually-hidden {
 main {
   text-align: center;
 }
+
 .services {
   padding-bottom: 114px;
 }
+
 .section-heading {
   font-size: 2.5rem;
   line-height: 1.5;
   text-transform: uppercase;
 }
+
 .section-description {
   font-family: 'Inria Serif';
   font-size: 1.125rem;
@@ -194,6 +199,7 @@ main {
 .services-list-item {
   flex-basis: 290px;
 }
+
 .services-list-item::before {
   content: '';
   display: block;
@@ -205,24 +211,30 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .e-commerce.services-list-item::before {
   background-image: url(../img/ico/recycle.jpg);
 }
+
 .responsive-web.services-list-item::before {
   background-image: url(../img/ico/computer-ok.jpg);
 }
+
 .web-security.services-list-item::before {
   background-image: url(../img/ico/lock.png);
 }
+
 .services-item-heading {
   font-size: 1.125rem;
   line-height: 1.2;
   margin-bottom: 8px;
 }
+
 .srvices-item-description {
   font-family: var(--secondary-font);
   font-size: 0.875rem;
   line-height: 1.7;
+  color: var(--secondary-color);
 }
 
 .contact-us {
@@ -234,11 +246,11 @@ main {
   background-position: right bottom 20px;
 }
 
-.contact-us > .section-heading {
+.contact-us>.section-heading {
   color: #fff;
 }
 
-.contact-us > .section-description {
+.contact-us>.section-description {
   color: #777777;
 }
 
@@ -259,18 +271,22 @@ main {
   border-radius: 2px;
   border: 2px solid rgb(204, 204, 204);
 }
+
 .contact-form-input::placeholder {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.875rem;
   color: #bbbbbb;
 }
+
 .contact-form-input:required:focus:valid {
   border: 2px solid #84ff00;
 }
+
 .contact-form-input:required:focus:invalid:not(:placeholder-shown) {
   border: 2px solid #ff0000;
 }
+
 .submit-btn {
   width: 240px;
   height: 65px;
