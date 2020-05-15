@@ -20,10 +20,63 @@
       url("../fonts/roboto-v20-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* Montserrat 400 700
+:root {
+  --main-font: "Montserrat";
+  --secondary-font: "Roboto";
+  --main-color: #ffffff;
+  --secondary-color: #333333;
+  --description-color: #666666;
+}
 
-Roboto 300 400
- */
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-header {
+  background-image: url(../img/mob-bannner.png);
+  background-color: #1a1915;
+  background-size: cover;
+}
+
+.authorization-list {
+  display: flex;
+}
 
 .logo {
   text-transform: uppercase;
