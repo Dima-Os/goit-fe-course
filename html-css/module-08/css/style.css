@@ -1,46 +1,45 @@
 /* montserrat-700 - latin */
 @font-face {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"),
-    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/montserrat-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-300 - latin */
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local("Roboto Light"), local("Roboto-Light"),
-    url("../fonts/roboto-v20-latin-300.woff2") format("woff2"),
+  src: local('Roboto Light'), local('Roboto-Light'),
+    url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/roboto-v20-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/roboto-v20-latin-300.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 :root {
-  --main-font: "Montserrat";
-  --secondary-font: "Roboto";
+  --main-font: 'Montserrat';
+  --secondary-font: 'Roboto';
   --main-color: #ffffff;
   --secondary-color: #333333;
   --description-color: #666666;
+  font-size: 62.5%;
 }
 
 html {
   box-sizing: border-box;
   font-family: var(--main-font);
-  font-size: 14px;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-h1 {
   margin: 0;
   padding: 0;
 }
@@ -68,6 +67,11 @@ button {
   color: inherit;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   width: 320px;
   margin: 0 auto;
@@ -77,17 +81,24 @@ button {
 .site-header {
   background-image: url(../img/mob-bannner.png);
   background-color: #1a1915;
+  background-position: center;
   background-size: cover;
   color: var(--main-color);
-  padding-top: 20px;
-  padding-bottom: 130px;
+  padding: 20px 0 138px;
   line-height: 1.2;
 }
 
 .authorization-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 116px;
+}
+
+.authorization-list-item {
+  font-size: 1.4rem;
+}
+
+.authorization-list-item:not(:last-child) {
+  margin-right: 6px;
 }
 
 .authorization-action {
@@ -99,7 +110,7 @@ button {
 }
 
 .authorization-action::before {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 100%;
@@ -116,32 +127,171 @@ button {
   visibility: visible;
 }
 
+.authorization-action:focus.authorization-action::before {
+  opacity: 1;
+  visibility: visible;
+}
+
 .logo {
   display: block;
   text-transform: uppercase;
-  font-size: 1.25rem;
-  margin-bottom: 34px;
+  font-size: 2rem;
 }
 
 .main-header {
-  padding: 0px 22px;
-  font-size: 1.875rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .header-description {
   padding: 0 60px;
   font-family: var(--secondary-font);
-  font-size: 1.125rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
 .find-partners-link {
-  margin: 0 auto;
   width: 280px;
-  display: block;
+  display: inline-block;
   padding: 13px 0;
   background-color: #ff4e50;
   border-radius: 24px;
+  font-size: 1.4rem;
+}
+
+.main-section {
+  padding: 72px 0 56px;
+}
+
+.partners-list-item {
+  margin: 0 auto;
+  width: 220px;
+}
+
+.partners-list-item-image {
+
+  border-radius: 50%;
+}
+
+.partners-list-item-image-wrapper {
+  width: 120px;
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+.partners-list-item-image-wrapper::before {
+  content: '';
+  display: block;
+  width: 41px;
+  height: 41px;
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.tv-set.partners-list-item-image-wrapper::before {
+  background-color: rgb(255, 78, 80);
+  background-image: url(../img/ico/tv-set.png);
+}
+
+.test-tube.partners-list-item-image-wrapper::before {
+  background-color: rgb(255, 165, 7);
+  background-image: url(../img/ico/test-tube.png);
+}
+
+.coffe.partners-list-item-image-wrapper::before {
+  background-color: rgb(28, 215, 173);
+  background-image: url(../img/ico/coffe.png);
+}
+
+.telegram.partners-list-item-image-wrapper::before {
+  background-color: rgb(78, 115, 219);
+  background-image: url(../img/ico/telegram.png);
+}
+
+.section-header {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.partners-list-item-name {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.partners-list-item-description {
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+}
+
+.partners-list-item {
+  margin-bottom: 28px;
+}
+
+.see-other-link {
+  width: 280px;
+  display: inline-block;
+  padding: 13px 0;
+  border: 2px solid #ff4e50;
+  border-radius: 24px;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  color: #ff4e50;
+}
+
+@media(max-width:767px) {
+  .authorization-list {
+    margin-bottom: 116px;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+}
+
+@media(min-width:768px) {
+  .wrapper {
+    width: 660px;
+  }
+
+  .site-header {
+    background-image: url(../img/tab-bannner_01.png);
+    padding: 38px 0 234px;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-header {
+    font-size: 5.2rem;
+    padding: 0 70px;
+    margin-bottom: 48px;
+  }
+
+  .header-description {
+    font-size: 2.4rem;
+    margin-bottom: 36px;
+  }
+
+  .find-partners-link {
+    width: 225px;
+
+  }
+
+}
+
+@media(max-width:940px) {
+  .nav-wrapper {
+    margin-bottom: 156px;
+  }
 }
