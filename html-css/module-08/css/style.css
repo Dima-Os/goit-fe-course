@@ -6,7 +6,7 @@
   src: local("Montserrat Bold"), local("Montserrat-Bold"),
     url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+    url("../fonts/montserrat-v14-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -18,7 +18,7 @@
   src: local("Roboto Light"), local("Roboto-Light"),
     url("../fonts/roboto-v20-latin-300.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/roboto-v20-latin-300.woff") format("woff");
+    url("../fonts/roboto-v20-latin-300.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -152,9 +152,8 @@ h1 {
 }
 
 .find-partners-link {
-  width: 280px;
   display: inline-block;
-  padding: 13px 0;
+  padding: 12px 48px;
   background-color: #ff4e50;
   border-radius: 24px;
   font-size: 1.4rem;
@@ -231,9 +230,9 @@ h1 {
 }
 
 .see-other-link {
-  width: 280px;
+
   display: inline-block;
-  padding: 13px 0;
+  padding: 12px 72px;
   border: 2px solid #ff4e50;
   border-radius: 24px;
   background-color: rgb(255, 255, 255);
@@ -245,9 +244,11 @@ h1 {
   .authorization-list {
     margin-bottom: 116px;
   }
+
   .logo {
     margin-bottom: 28px;
   }
+
   .partners-list-item {
     margin: 0 auto 28px;
   }
@@ -283,38 +284,66 @@ h1 {
   }
 
   .find-partners-link {
-    width: 225px;
+    padding: 12px 22px;
   }
-  .main-section {
-    padding: 70px 0 40px;
+
+  .see-other-link {
+    padding: 12px 30px;
   }
+
   .section-header {
     margin-bottom: 34px;
   }
+
   .partners-list {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
+    justify-content: center;
+    margin-bottom: 38px;
   }
-  .see-other-link {
-    width: 225px;
-  }
+
 }
-@media (min-width: 767px) and (max-width: 1023px) {
+
+@media (min-width: 767px) and (max-width: 939px) {
   .partners-list {
     flex-wrap: wrap;
-    padding: 0 74px;
   }
+
+  .main-section {
+    padding: 70px 0 40px;
+  }
+
   .lucas-marsha {
     order: 2;
   }
+
   .heather-halker {
     order: 1;
   }
+
   .bradley-hunter-gr {
     order: 3;
   }
-  .partners-list-item:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 28px;
+
+  .partners-list-item:nth-child(odd) {
+    margin-bottom: 56px;
+  }
+
+  .partners-list-item:nth-child(-n+2) {
+    margin-right: 36px;
+  }
+}
+
+@media(min-width:940px) {
+  .wrapper {
+    width: 940px;
+  }
+
+  .site-header {
+    background-image: url(../img/desktop-bannner.png);
+  }
+
+  .main-header {
+    font-size: 5.2rem;
+    padding: 0 210px;
   }
 }
