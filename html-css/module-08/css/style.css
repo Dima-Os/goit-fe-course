@@ -1,30 +1,30 @@
 /* montserrat-700 - latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-    url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+      url("../fonts/montserrat-v14-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-300 - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'),
-    url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("../fonts/roboto-v20-latin-300.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v20-latin-300.woff') format('woff');
+      url("../fonts/roboto-v20-latin-300.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 :root {
-  --main-font: 'Montserrat';
-  --secondary-font: 'Roboto';
+  --main-font: "Montserrat";
+  --secondary-font: "Roboto";
   --main-color: #ffffff;
   --secondary-color: #333333;
   --description-color: #666666;
@@ -110,7 +110,7 @@ h1 {
 }
 
 .authorization-action::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -147,8 +147,8 @@ h1 {
 .header-description {
   padding: 0 60px;
   font-family: var(--secondary-font);
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 14px;
 }
 
 .find-partners-link {
@@ -161,16 +161,21 @@ h1 {
 }
 
 .main-section {
-  padding: 72px 0 56px;
+  padding: 66px 0 56px;
+  color: var(--secondary-color);
+  line-height: 1.2;
+}
+
+.section-header {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
 }
 
 .partners-list-item {
-  margin: 0 auto;
   width: 220px;
 }
 
 .partners-list-item-image {
-
   border-radius: 50%;
 }
 
@@ -181,7 +186,7 @@ h1 {
 }
 
 .partners-list-item-image-wrapper::before {
-  content: '';
+  content: "";
   display: block;
   width: 41px;
   height: 41px;
@@ -214,24 +219,15 @@ h1 {
   background-image: url(../img/ico/telegram.png);
 }
 
-.section-header {
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin-bottom: 18px;
-}
-
 .partners-list-item-name {
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .partners-list-item-description {
+  color: var(--description-color);
   font-family: var(--secondary-font);
   font-size: 1.4rem;
-}
-
-.partners-list-item {
-  margin-bottom: 28px;
 }
 
 .see-other-link {
@@ -245,17 +241,19 @@ h1 {
   color: #ff4e50;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   .authorization-list {
     margin-bottom: 116px;
   }
-
   .logo {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+  }
+  .partners-list-item {
+    margin: 0 auto 28px;
   }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .wrapper {
     width: 660px;
   }
@@ -270,12 +268,13 @@ h1 {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 140px;
   }
 
   .main-header {
     font-size: 5.2rem;
     padding: 0 70px;
-    margin-bottom: 48px;
+    margin-bottom: 26px;
   }
 
   .header-description {
@@ -285,13 +284,37 @@ h1 {
 
   .find-partners-link {
     width: 225px;
-
   }
-
+  .main-section {
+    padding: 70px 0 40px;
+  }
+  .section-header {
+    margin-bottom: 34px;
+  }
+  .partners-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .see-other-link {
+    width: 225px;
+  }
 }
-
-@media(max-width:940px) {
-  .nav-wrapper {
-    margin-bottom: 156px;
+@media (min-width: 767px) and (max-width: 1023px) {
+  .partners-list {
+    flex-wrap: wrap;
+    padding: 0 74px;
+  }
+  .lucas-marsha {
+    order: 2;
+  }
+  .heather-halker {
+    order: 1;
+  }
+  .bradley-hunter-gr {
+    order: 3;
+  }
+  .partners-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 28px;
   }
 }
