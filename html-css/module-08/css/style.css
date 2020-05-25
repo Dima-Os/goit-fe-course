@@ -6,7 +6,7 @@
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
     url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+    url('../fonts/montserrat-v14-latin-700.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -18,7 +18,7 @@
   src: local('Roboto Light'), local('Roboto-Light'),
     url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/roboto-v20-latin-300.woff') format('woff');
+    url('../fonts/roboto-v20-latin-300.woff') format('woff');
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -169,6 +169,7 @@ h1 {
   margin-bottom: 14px;
 }
 
+
 .partners-list-item {
   width: 220px;
 }
@@ -246,9 +247,11 @@ h1 {
   .logo {
     margin-bottom: 28px;
   }
+
   .header-description {
     padding: 0 60px;
   }
+
   .partners-list-item {
     margin: 0 auto 28px;
   }

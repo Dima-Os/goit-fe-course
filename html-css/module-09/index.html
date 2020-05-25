@@ -3,29 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>module-09</title>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <div class="row navigation">
-          <div class="col-12">
-            <ul class="authorization-list">
-              <li class="authorization-list-item">
-                <button class="authorization-action">Log in</button>
-              </li>
-              <li class="authorization-list-item">
-                <button class="authorization-action">Sign up</button>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12">
-            <a class="site-logo-link" href="#">URLAUBSGLÜCK</a>
-          </div>
+    <header class="site-header container">
+      <div
+        class="row navigation flex-md-row-reverse justify-content-md-between align-items-md-center"
+      >
+        <div class="col-12 col-md-4 col-lg-2 authorization-list-wrapper">
+          <ul class="authorization-list">
+            <li class="authorization-list-item">
+              <button class="authorization-action">Log in</button>
+            </li>
+            <li class="authorization-list-item">
+              <button class="authorization-action">Sign up</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+          <a class="site-logo-link" href="#">URLAUBSGLÜCK</a>
         </div>
       </div>
     </header>
@@ -47,13 +46,13 @@
       </section>
       <section class="partners-section">
         <div class="container">
-          <div class="row">
+          <div class="row section-heading-wrapper">
             <h2 class="col-12 section-header">
               Meet a partner for your best holiday
             </h2>
           </div>
-          <ul class="row">
-            <li class="col-12 partners-list-item">
+          <ul class="row partners-list justify-content-md-center">
+            <li class="col-12 col-md-5 col-lg-3 partners-list-item">
               <div class="partners-list-item-image-wrapper tv-set">
                 <img
                   width="120"
@@ -68,7 +67,7 @@
                 Based in Chicago. I love playing tennis and loud music.
               </p>
             </li>
-            <li class="col-12 partners-list-item">
+            <li class="col-12 col-md-5 col-lg-3 partners-list-item order-md-2">
               <div class="partners-list-item-image-wrapper test-tube">
                 <img
                   width="120"
@@ -84,7 +83,7 @@
                 passion to colours, typography and skateboards.
               </p>
             </li>
-            <li class="col-12 partners-list-item">
+            <li class="col-12 col-md-5 col-lg-3 partners-list-item order-md-1">
               <div class="partners-list-item-image-wrapper coffe">
                 <img
                   width="120"
@@ -99,7 +98,7 @@
                 I'm a happy person that loves cats and climbing on mountains.
               </p>
             </li>
-            <li class="col-12 partners-list-item">
+            <li class="col-12 col-md-5 col-lg-3 partners-list-item order-md-3">
               <div class="partners-list-item-image-wrapper telegram">
                 <img
                   width="120"
