@@ -342,27 +342,23 @@ input[type='radio'].visually-hidden {
 
 
 .section-hero {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(252, 227, 138, .9)), to(rgb(243, 129, 129, .9))),
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(252, 227, 138, .9)), to(rgb(243, 129, 129, .9))),
     url(../img/background-bird.jpg);
-  background: -o-linear-gradient(left, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
+  background-image: -o-linear-gradient(left, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
     url(../img/background-bird.jpg);
-  background: linear-gradient(90deg, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
+  background-image: linear-gradient(90deg, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
     url(../img/background-bird.jpg);
-  ;
-  background-position: center;
-  background-size: cover;
-  padding: 196px 0 230px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (-o-min-device-pixel-ratio: 2/1),
 (min-resolution: 192dpi) {
   .section-hero {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(252, 227, 138, .9)), to(rgb(243, 129, 129, .9))),
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(252, 227, 138, .9)), to(rgb(243, 129, 129, .9))),
       url(../img/background-bird@2x.jpg);
-    background: -o-linear-gradient(left, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
+    background-image: -o-linear-gradient(left, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
       url(../img/background-bird@2x.jpg);
-    background: linear-gradient(90deg, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
+    background-image: linear-gradient(90deg, rgba(252, 227, 138, .9), rgb(243, 129, 129, .9)),
       url(../img/background-bird@2x.jpg);
   }
 }
