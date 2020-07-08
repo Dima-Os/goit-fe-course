@@ -5,18 +5,20 @@ const pricePerDroid = 3000;
 const buyButtonRef = document.querySelector('.buy-button');
 buyButtonRef.addEventListener('click', () => {
   const imputtedAmount = prompt('Введите количество дроидов');
-  if (imputtedAmount == null) {
+  if (imputtedAmount === null) {
     console.log('Отменено пользователем!');
-  } else if (isNaN(imputtedAmount) || Number(imputtedAmount) <= 0) {
+  } else if (Number.isNaN(Number(imputtedAmount)) || imputtedAmount <= 0) {
     console.log('Введено не корректное число!');
   } else {
     totalPrice = Number(imputtedAmount) * pricePerDroid;
-    totalPrice > credits
-      ? console.log('Недостаточно средств на счету!')
-      : console.log(
-          `Вы купили ${Number(imputtedAmount)} дроидов, на счету осталось ${
-            credits - totalPrice
-          } кредитов.)`,
-        );
+    if (totalPrice > credits) {
+      console.log('Недостаточно средств на счету!');
+    } else {
+      console.log(
+        `Вы купили ${Number(imputtedAmount)} дроидов, на счету осталось ${
+          credits - totalPrice
+        } кредитов.)`,
+      );
+    }
   }
 });

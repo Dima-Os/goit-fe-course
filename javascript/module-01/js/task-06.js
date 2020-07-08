@@ -1,15 +1,15 @@
+'use strict';
 let total = 0;
 let input;
 const startInputButtonRef = document.querySelector('.start-input-button');
 startInputButtonRef.addEventListener('click', () => {
-  while (input !== null) {
+  do {
     input = prompt('Введите число:');
-    if (isNaN(input)) {
+    if (Number.isNaN(Number(input))) {
       alert('Было введено не число, попробуйте еще раз!');
-    } else {
-      total += Number(input);
     }
-  }
-
+    total += +input;
+    console.log(input);
+  } while (input !== null);
   alert(`Общая сумма чисел равна: ${total}`);
 });
