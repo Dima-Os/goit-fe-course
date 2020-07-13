@@ -9,6 +9,7 @@ const startFunctionRef = document.querySelector(".start-function");
 startFunctionRef.addEventListener("click", () => {
   logItems(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]);
 });
-// console.log(startFunctionRef);
-// logItems(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]);
-// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+const startSecondFunctionRef = document.querySelector(".start-second-function");
+startSecondFunctionRef.addEventListener("click", () => {
+  logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+});
