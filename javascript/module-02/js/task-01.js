@@ -5,6 +5,7 @@ const logItems = function (array) {
     console.log(`${i + 1} - ${array[i]}`);
   }
 };
+/*Just to separate tasks of homework*/
 const startFunctionRef = document.querySelector(".start-function");
 startFunctionRef.addEventListener("click", () => {
   logItems(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]);
