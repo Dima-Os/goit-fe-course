@@ -1,10 +1,9 @@
 'use strict';
 const formatString = function (string) {
-  if (string.length <= 40) {
-    return string;
-  }
-  return string.slice(0, 40) + ' ...';
+  return string.length <= 40 ? string : string.slice(0, 40) + ' ...';
 };
+
+/*Just to separate tasks of homework*/
 const cutStringFirstRef = document.querySelector('.cut-string-first');
 cutStringFirstRef.addEventListener('click', () => {
   console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
