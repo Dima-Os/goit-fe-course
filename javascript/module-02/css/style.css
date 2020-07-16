@@ -11,22 +11,51 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 .section {
-  padding-top: 30px;
-  padding-bottom: 30px;
   font-size: 18px;
-  border-bottom: 2px solid #cccccc;
+  /* border-bottom: 2px solid #cccccc; */
   text-align: center;
+  margin-bottom: 15px;
 }
 
 fieldset {
-  padding: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  border-width: 3px;
+  color: #b9cded;
+  /* border-style: groove; */
+  border-color: rgba(0, 176, 255, 1);
 }
 
-button:not(:last-of-type) {
-  margin-right: 30px;
+button {
+  /* outline: none; */
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  width: 400px;
+  height: 50px;
+  border: 2px solid rgba(0, 176, 255, 1);
+  border-radius: 5px;
+  font-size: 20px;
+  color: #b9cded;
+  background: radial-gradient(
+    circle,
+    rgba(17, 98, 199, 1) 0%,
+    rgba(9, 34, 121, 1) 44%,
+    rgba(0, 176, 255, 1) 100%
+  );
 }
