@@ -5,7 +5,9 @@ const startInputButtonRef = document.querySelector('.start-input-button');
 startInputButtonRef.addEventListener('click', () => {
   do {
     input = prompt('Введите число:');
-    if (Number.isNaN(Number(input))) {
+    if (input === null) {
+      break;
+    } else if (Number.isNaN(Number(input))) {
       alert('Было введено не число, попробуйте еще раз!');
     }
     total += +input;
