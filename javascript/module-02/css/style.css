@@ -29,7 +29,9 @@ body {
   /* background-position: center; */
   background-size: 100% auto;
 }
-
+ul {
+  margin-left: 20px;
+}
 .container {
   max-width: 900px;
   margin: 0 auto;
