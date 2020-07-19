@@ -18,7 +18,6 @@ export const addLogin = function (allLogins, login) {
   }
   if (isLoginValid(login)) {
     return 'Логин успешно добавлен!';
-  } else {
-    return 'Ошибка! Логин должен быть от 4 до 16 символов!';
   }
+  return 'Ошибка! Логин должен быть от 4 до 16 символов!';
 };

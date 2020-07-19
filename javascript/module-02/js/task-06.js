@@ -7,13 +7,15 @@ const startInputButtonRef = document.querySelector('.start-input-button');
 startInputButtonRef.addEventListener('click', () => {
   do {
     input = prompt('Введите число:');
-    if (Number.isNaN(+input)) {
+    if (input === null) {
+      break;
+    } else if (Number.isNaN(+input)) {
       alert('Было введено не число, попробуйте еще раз!');
     } else if (input !== null) {
       numbers.push(input);
     }
   } while (input !== null);
-  if (numbers.length > 0) {
+  if (numbers.length) {
     for (const element of numbers) {
       total += +element;
     }
