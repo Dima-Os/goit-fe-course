@@ -1,6 +1,11 @@
 'use strict';
 export const findBestEmployee = function (employees) {
+  let bestQuantity = 0;
   for (const name in employees) {
+    if (employees[name] > bestQuantity) {
+      bestQuantity = employees[name];
+      console.log('bestQuantity', bestQuantity);
+    }
   }
 };
 
