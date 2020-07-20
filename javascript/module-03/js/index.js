@@ -77,3 +77,7 @@ returnValuesArrayRef.addEventListener("click", () => {
   console.log(getAllPropValues(products, "quantity"));
   console.log(getAllPropValues(products, "category"));
 });
+/*==========task-06=============*/
+import { products }
+
+// calculate-total-price
