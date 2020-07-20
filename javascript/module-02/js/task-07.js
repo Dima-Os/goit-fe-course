@@ -13,11 +13,12 @@ export const isLoginUnique = function (allLogins, login) {
   return allLogins.includes(login);
 };
 export const addLogin = function (allLogins, login) {
-  if (isLoginUnique(allLogins, login)) {
-    return 'Такой логин уже используется!';
-  }
   if (isLoginValid(login)) {
-    return 'Логин успешно добавлен!';
+    if (isLoginUnique(allLogins, login)) {
+      logins.push(login);
+      return 'Логин успешно добавлен!';
+    }
+    return 'Такой логин уже используется!';
   }
   return 'Ошибка! Логин должен быть от 4 до 16 символов!';
 };

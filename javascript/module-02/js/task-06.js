@@ -7,11 +7,11 @@ const startInputButtonRef = document.querySelector('.start-input-button');
 startInputButtonRef.addEventListener('click', () => {
   do {
     input = prompt('Введите число:');
-    if (input === null) {
-      break;
-    } else if (Number.isNaN(+input)) {
-      alert('Было введено не число, попробуйте еще раз!');
-    } else if (input !== null) {
+    if (input !== null) {
+      if (Number.isNaN(+input)) {
+        alert('Было введено не число, попробуйте еще раз!');
+        continue;
+      }
       numbers.push(input);
     }
   } while (input !== null);
