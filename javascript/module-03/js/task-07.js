@@ -1,9 +1,9 @@
-'use strict';
-const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
+"use strict";
+export const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
 };
-const account = {
+export const account = {
   balance: 0,
   transactions: [],
   createTransaction(amount, type) {
@@ -16,43 +16,41 @@ const account = {
   deposit(amount) {
     const currentTransaction = this.createTransaction(
       amount,
-      Transaction.DEPOSIT,
+      Transaction.DEPOSIT
     );
     this.transactions.push(currentTransaction);
     this.balance += amount;
     return;
   },
   withdraw(amount) {
-    if (this.balance > amount) {
-      const currentTransaction = this.createTransaction(
-        amount,
-        Transaction.DEPOSIT,
-      );
-      this.transactions.push(currentTransaction);
-      this.balance -= amount;
-      return;
+    if (amount > this.balance) {
+      return "Cнятие такой суммы не возможно, недостаточно средств.";
     }
-    return 'Fuck you!';
+    const currentTransaction = this.createTransaction(
+      amount,
+      Transaction.WITHDRAW
+    );
+    this.transactions.push(currentTransaction);
+    this.balance -= amount;
+    return;
+  },
+  getBalance() {
+    return this.balance;
+  },
+  getTransactionDetails(id) {
+    for (let transactionToFind of this.transactions) {
+      if (transactionToFind.id === id) {
+        return transactionToFind;
+      }
+    }
+  },
+  getTransactionTotal(type) {
+    let totalByType = 0;
+    for (let transactionType of this.transactions) {
+      if (transactionType.type === type) {
+        totalByType += transactionType.amount;
+      }
+    }
+    return totalByType;
   },
 };
-
-console.log(account);
-console.log(account.balance);
-
-console.log(account.withdraw(2000));
-console.log(account.withdraw(10));
-console.log(account.withdraw(1));
-account.deposit(500);
-account.deposit(600);
-account.deposit(100);
-console.log(account.withdraw(10));
-console.log(account.withdraw(10));
-console.log(account);
-console.log(account.balance);
-console.log(account.withdraw(2000));
-console.log(account);
-console.log(account.withdraw(100));
-console.log(account.balance);
-console.log(account.withdraw(2000));
-console.log(account);
-console.log(account.balance);
