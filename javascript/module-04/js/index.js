@@ -15,9 +15,9 @@ runLogRef.addEventListener('click', runLog);
 import { inventory } from './task-02.js';
 import { invokeInventoryAction } from './task-02.js';
 const runInv = function () {
-  invokeInventoryAction('Medkit', inventory.add.bind(inventory));
+  invokeInventoryAction('Medkit', inventory.add);
   console.log(inventory.items);
-  invokeInventoryAction('Gas mask', inventory.remove.bind(inventory));
+  invokeInventoryAction('Gas mask', inventory.remove);
   console.log(inventory.items);
 };
 const runInvRef = document.querySelector('.run-inventory');
