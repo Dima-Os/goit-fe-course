@@ -1,33 +1,33 @@
-'use strict';
+"use strict";
 /*==========task-01=============*/
 
-import { Account } from './task-01.js';
+import { Account } from "./task-01.js";
 const runLog = () => {
   console.log(Account.prototype.getInfo);
 
   const mango = new Account({
-    login: 'Mangozedog',
-    email: 'mango@dog.woof',
+    login: "Mangozedog",
+    email: "mango@dog.woof",
   });
 
   mango.getInfo();
 
   const poly = new Account({
-    login: 'Poly',
-    email: 'poly@mail.com',
+    login: "Poly",
+    email: "poly@mail.com",
   });
 
   poly.getInfo();
 };
-const runLogRef = document.querySelector('.run-log');
-runLogRef.addEventListener('click', runLog);
+const runLogRef = document.querySelector(".run-log");
+runLogRef.addEventListener("click", runLog);
 
 /*==========task-02=============*/
 
-import { User } from './task-02.js';
+import { User } from "./task-02.js";
 const runSecondLog = () => {
   const mango = new User({
-    name: 'Mango',
+    name: "Mango",
     age: 2,
     followers: 20,
   });
@@ -35,48 +35,75 @@ const runSecondLog = () => {
   mango.getInfo();
 
   const poly = new User({
-    name: 'Poly',
+    name: "Poly",
     age: 3,
     followers: 17,
   });
 
   poly.getInfo();
 };
-const runSecondLogRef = document.querySelector('.run-second-log');
-runSecondLogRef.addEventListener('click', runSecondLog);
+const runSecondLogRef = document.querySelector(".run-second-log");
+runSecondLogRef.addEventListener("click", runSecondLog);
 
 /*==========task-03=============*/
-import { Storage } from './task-03.js';
+import { Storage } from "./task-03.js";
 const runThirdLog = () => {
   const storage = new Storage([
-    'Нанитоиды',
-    'Пролонгер',
-    'Железные жупи',
-    'Антигравитатор',
+    "Нанитоиды",
+    "Пролонгер",
+    "Железные жупи",
+    "Антигравитатор",
   ]);
 
   const items = storage.getItems();
   console.table(items);
 
-  storage.addItem('Дроид');
+  storage.addItem("Дроид");
   console.table(storage.items);
 
-  storage.removeItem('Пролонгер');
+  storage.removeItem("Пролонгер");
   console.table(storage.items);
 };
-const runThirdLogRef = document.querySelector('.run-third-log');
-runThirdLogRef.addEventListener('click', runThirdLog);
+const runThirdLogRef = document.querySelector(".run-third-log");
+runThirdLogRef.addEventListener("click", runThirdLog);
 /*==========task-04=============*/
-import { StringBuilder } from './task-04.js';
+import { StringBuilder } from "./task-04.js";
 const runFourthLog = () => {
-  const builder = new StringBuilder('.');
-  builder.append('^');
+  const builder = new StringBuilder(".");
+  builder.append("^");
   console.log(builder.value);
 
-  builder.prepend('^');
+  builder.prepend("^");
   console.log(builder.value);
-  builder.pad('=');
+  builder.pad("=");
   console.log(builder.value);
 };
-const runFourthLogRef = document.querySelector('.run-fourth-log');
-runFourthLogRef.addEventListener('click', runFourthLog);
+const runFourthLogRef = document.querySelector(".run-fourth-log");
+runFourthLogRef.addEventListener("click", runFourthLog);
+
+/*==========task-04=============*/
+import { Car } from "./task-05.js";
+const runFiveLog = () => {
+  const mustang = new Car({
+    maxSpeed: 200,
+    price: 2000,
+  });
+  mustang.turnOn();
+  mustang.accelerate(50);
+  mustang.drive(2);
+
+  Car.getSpecs(mustang);
+
+  mustang.decelerate(20);
+  mustang.drive(1);
+
+  mustang.turnOff();
+
+  Car.getSpecs(mustang);
+
+  console.log(mustang.price);
+  mustang.price = 4000;
+  console.log(mustang.price);
+};
+const runFiveLogRef = document.querySelector(".run-five-log");
+runFiveLogRef.addEventListener("click", runFiveLog);
