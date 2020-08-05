@@ -66,3 +66,17 @@ const runThirdLog = () => {
 };
 const runThirdLogRef = document.querySelector('.run-third-log');
 runThirdLogRef.addEventListener('click', runThirdLog);
+/*==========task-04=============*/
+import { StringBuilder } from './task-04.js';
+const runFourthLog = () => {
+  const builder = new StringBuilder('.');
+  builder.append('^');
+  console.log(builder.value);
+
+  builder.prepend('^');
+  console.log(builder.value);
+  builder.pad('=');
+  console.log(builder.value);
+};
+const runFourthLogRef = document.querySelector('.run-fourth-log');
+runFourthLogRef.addEventListener('click', runFourthLog);
