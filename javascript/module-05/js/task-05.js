@@ -1,10 +1,10 @@
 "use strict";
 export class Car {
-  constructor({ speed = 0, price, maxSpeed, isOn = false, distance = 0 }) {
-    this.speed = speed;
+  constructor({ price, maxSpeed }) {
+    this.speed = 0;
     this._price = price;
     this.maxSpeed = maxSpeed;
-    this.isOn = isOn;
+    this.isOn = false;
     this.distance = 0;
   }
   static getSpecs(car) {
