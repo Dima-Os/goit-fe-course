@@ -1,8 +1,15 @@
+import users from './users.js';
 /*==========task-01=============*/
 import { getUserNames } from './task-01.js';
-import users from './users.js';
 const runLog = () => {
   console.log(getUserNames(users));
 };
 const runLogRef = document.querySelector('.run-log');
 runLogRef.addEventListener('click', runLog);
+/*==========task-02=============*/
+import { getUsersWithEyeColor } from './task-02.js';
+const runSecondLog = () => {
+  console.log(getUsersWithEyeColor(users, 'blue'));
+};
+const runSecondLogRef = document.querySelector('.run-second-log');
+runSecondLogRef.addEventListener('click', runSecondLog);

@@ -1,4 +1,3 @@
-// import users from './users.js';
 export const getUserNames = users => {
   let usersNamesArray = [];
   users.forEach(el => usersNamesArray.push(el.name));
