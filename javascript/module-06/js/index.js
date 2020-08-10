@@ -13,3 +13,10 @@ const runSecondLog = () => {
 };
 const runSecondLogRef = document.querySelector('.run-second-log');
 runSecondLogRef.addEventListener('click', runSecondLog);
+/*==========task-03=============*/
+import { getUsersWithGender } from './task-03.js';
+const runThirdLog = () => {
+  console.log(getUsersWithGender(users, 'male'));
+};
+const runThirdLogRef = document.querySelector('.run-third-log');
+runThirdLogRef.addEventListener('click', runThirdLog);
