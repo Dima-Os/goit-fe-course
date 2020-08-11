@@ -35,7 +35,7 @@ const runFivethLog = () => {
 };
 const runFivethLogRef = document.querySelector(".run-fiveth-log");
 runFivethLogRef.addEventListener("click", runFivethLog);
-/*==========task-05=============*/
+/*==========task-06=============*/
 import { getUsersWithAge } from "./task-06.js";
 const runSixthLog = () => {
   console.log(getUsersWithAge(users, 20, 30));
@@ -43,3 +43,10 @@ const runSixthLog = () => {
 };
 const runSixthLogRef = document.querySelector(".run-sixth-log");
 runSixthLogRef.addEventListener("click", runSixthLog);
+/*==========task-07=============*/
+import { calculateTotalBalance } from "./task-07.js";
+const runSeventhLog = () => {
+  console.log(calculateTotalBalance(users));
+};
+const runSeventhLogRef = document.querySelector(".run-seventh-log");
+runSeventhLogRef.addEventListener("click", runSeventhLog);
