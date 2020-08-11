@@ -1,11 +1,7 @@
-export const getNamesSortedByFriendsCount = (users) => {
-  let sortedNamesArray = [];
-  users
+export const getNamesSortedByFriendsCount = users => {
+  return [...users]
     .sort((a, b) => a.friends.length - b.friends.length)
-    .forEach((element) => {
-      sortedNamesArray.push(element.name);
-    });
-  return sortedNamesArray;
+    .map(el => el.name);
 };
 /*The script below were commented to allow button in html run this script*/
 // console.log(getNamesSortedByFriendsCount(users));

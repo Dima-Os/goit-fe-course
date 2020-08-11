@@ -1,13 +1,13 @@
-import users from "./users.js";
-const getSortedUniqueSkills = (users) => {
-  users.reduce((skills, user) => {}, []);
+export const getSortedUniqueSkills = users => {
+  return users
+    .reduce((allSkills, user) => [...allSkills, ...user.skills], [])
+    .sort()
+    .reduce((allUniqSkills, skill) => {
+      if (allUniqSkills[allUniqSkills.length - 1] !== skill) {
+        allUniqSkills.push(skill);
+      }
+      return allUniqSkills;
+    }, []);
 };
-
-/**const getSortedUniqueSkills = users => {
-  // твой код
-};
-
-console.log(getSortedUniqueSkills(users));
-// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 
-'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 
-'proident', 'tempor', 'velit', 'veniam' ] */
+/*The script below were commented to allow button in html run this script*/
+// console.log(getSortedUniqueSkills(users));
