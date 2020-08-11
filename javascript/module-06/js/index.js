@@ -27,3 +27,11 @@ const runFourthLog = () => {
 };
 const runFourthLogRef = document.querySelector(".run-fourth-log");
 runFourthLogRef.addEventListener("click", runFourthLog);
+/*==========task-05=============*/
+import { getUserWithEmail } from "./task-05.js";
+const runFiveLog = () => {
+  console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
+  console.log(getUserWithEmail(users, "elmahead@omatom.com"));
+};
+const runFiveLogRef = document.querySelector(".run-five-log");
+runFiveLogRef.addEventListener("click", runFiveLog);
