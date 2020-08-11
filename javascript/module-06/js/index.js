@@ -58,3 +58,10 @@ const runEighthLog = () => {
 };
 const runEighthLogRef = document.querySelector(".run-eighth-log");
 runEighthLogRef.addEventListener("click", runEighthLog);
+/*==========task-09=============*/
+import { getNamesSortedByFriendsCount } from "./task-09.js";
+const runNinethLog = () => {
+  console.log(getNamesSortedByFriendsCount(users));
+};
+const runNinethLogRef = document.querySelector(".run-ninth-log");
+runNinethLogRef.addEventListener("click", runNinethLog);
