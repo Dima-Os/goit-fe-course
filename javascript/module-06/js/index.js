@@ -50,3 +50,11 @@ const runSeventhLog = () => {
 };
 const runSeventhLogRef = document.querySelector(".run-seventh-log");
 runSeventhLogRef.addEventListener("click", runSeventhLog);
+/*==========task-08=============*/
+import { getUsersWithFriend } from "./task-08.js";
+const runEighthLog = () => {
+  console.log(getUsersWithFriend(users, "Briana Decker"));
+  console.log(getUsersWithFriend(users, "Goldie Gentry"));
+};
+const runEighthLogRef = document.querySelector(".run-eighth-log");
+runEighthLogRef.addEventListener("click", runEighthLog);
