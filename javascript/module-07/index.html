@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>module-07</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>module-07</h1>
+        <section class="section">
+            <fieldset>
+                <legend>Task-01</legend>
+                <div class="hover-wrapper">
+                    <button type="submit" class="run-log start-function">
+                        Run task-01</button>
+                    <div class="statement">
+                        <h2></a>Задание 1</h2>
+                        <p>Напиши скрипт, который выполнит следующие операции.</p>
+                        <p>Посчитает и выведет в консоль количество категорий в <code>ul#categories</code>, то есть
+                            элементов <code>li.item</code>. Получится <code>'В списке 3 категории.'</code>.</p>
+                        <p>Для каждого элемента <code>li.item</code> в списке <code>ul#categories</code>, найдет и
+                            выведет в
+                            консоль текст заголовка элемента (тега h2) и количество элементов в категории
+                            (всех вложенных в него элементов <code>li</code>).</p>
+                    </div>
+                    <div class="task-html">
+                        <ul id="categories">
+                            <li class="item">
+                                <h2>Животные</h2>
+
+                                <ul>
+                                    <li>Кот</li>
+                                    <li>Хомяк</li>
+                                    <li>Лошадь</li>
+                                    <li>Попугай</li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h2>Продукты</h2>
+
+                                <ul>
+                                    <li>Хлеб</li>
+                                    <li>Петрушка</li>
+                                    <li>Творог</li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h2>Технологии</h2>
+
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                    <li>Node</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+        <section class="section">
+            <fieldset>
+                <legend>Task-02</legend>
+                <div class="hover-wrapper">
+                    <button type="submit" class="run-second-log start-function">
+                        Run task-02</button>
+                    <div class="statement">
+                        <h2></a>Задание 2</h2>
+                        <p>Напиши скрипт, который для каждого элемента массива <code>ingredients</code> создаст
+                            отдельный <code>li</code>, после чего вставит все <code>li</code> за одну операцию в список
+                            <code>ul.ingredients</code>. Для создания DOM-узлов используй
+                            <code>document.createElement()</code>.</p>
+                    </div>
+                    <div class="task-html">
+                        <ul id="gallery"></ul>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/task-01.js"></script>
+    <script type="module" src="./js/task-02.js"></script>
+
+</body>
+
+
+</html>
