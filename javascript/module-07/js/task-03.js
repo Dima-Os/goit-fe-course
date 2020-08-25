@@ -19,6 +19,7 @@ export const galleryRef = document.querySelector('#gallery');
 export const createImgTag = list => {
   return list.map(el => `<li><img src="${el.url}" alt="${el.alt}" ></li>`);
 };
-export const appendItems = () =>
+export function appendItems() {
   galleryRef.insertAdjacentHTML('afterbegin', createImgTag(images).join(''));
+}
 // appendItems();

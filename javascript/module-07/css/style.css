@@ -60,6 +60,13 @@ ul {
   margin-bottom: 10px;
 }
 
+.show-statement {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  transform: initial;
+}
+
 fieldset {
   font-size: 20px;
   text-transform: uppercase;
@@ -126,4 +133,14 @@ ul#gallery > li > img {
   height: auto;
   border: 5px solid rgba(0, 176, 255, 1);
   border-radius: 50%;
+}
+
+.display {
+  padding: 12px 25px;
+  border: 2px solid rgba(0, 176, 255, 1);
+  border-radius: 5px;
+}
+.actionButton {
+  width: 100px;
+  height: 50px;
 }

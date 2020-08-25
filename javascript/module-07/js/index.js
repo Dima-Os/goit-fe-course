@@ -1,22 +1,26 @@
-// ===========Task-01===========
 import {
   categoriesRef,
   showCategories,
   showHeadingWithCount,
 } from './task-01.js';
+import { ingredients, ingredientsRef, createList } from './task-02.js';
+import { appendItems } from './task-03.js';
+
 const runlogRef = document.querySelector('.run-log');
-const runLog = () => {
+const runSecondLogRef = document.querySelector('.run-second-log');
+const runThirdLogRef = document.querySelector('.run-third-log');
+
+function onRunLog() {
   showCategories(categoriesRef);
   showHeadingWithCount(categoriesRef);
-};
-runlogRef.addEventListener('click', runLog);
-// ===========Task-02===========
-import { ingredients, ingredientsRef, createList } from './task-02.js';
-const runSecondLogRef = document.querySelector('.run-second-log');
-const runSecondLog = () => ingredientsRef.append(...createList(ingredients));
-runSecondLogRef.addEventListener('click', runSecondLog);
-// ===========Task-03===========
-import { appendItems } from './task-03.js';
-const runThirdLogRef = document.querySelector('.run-third-log');
-const runThirdLog = () => appendItems();
-runThirdLogRef.addEventListener('click', runThirdLog);
+}
+function onRunSecondLog() {
+  ingredientsRef.append(...createList(ingredients));
+}
+function onRunThirdLog() {
+  appendItems();
+}
+
+runlogRef.addEventListener('click', onRunLog);
+runSecondLogRef.addEventListener('click', onRunSecondLog);
+runThirdLogRef.addEventListener('click', onRunThirdLog);
