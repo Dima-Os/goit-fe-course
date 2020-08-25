@@ -143,4 +143,31 @@ ul#gallery > li > img {
 .actionButton {
   width: 100px;
   height: 50px;
+  margin: 0 10px;
+}
+
+fieldset > h1 {
+  text-transform: initial;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+#controls {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#controls > .display {
+  padding: 15px 25px;
 }
