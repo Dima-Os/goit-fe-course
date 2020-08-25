@@ -11,7 +11,12 @@ const runLog = () => {
 };
 runlogRef.addEventListener('click', runLog);
 // ===========Task-02===========
-import { ingredients, galleryRef, createItem, createList } from './task-02.js';
+import { ingredients, ingredientsRef, createList } from './task-02.js';
 const runSecondLogRef = document.querySelector('.run-second-log');
-const runSecondLog = () => galleryRef.append(...createList(ingredients));
+const runSecondLog = () => ingredientsRef.append(...createList(ingredients));
 runSecondLogRef.addEventListener('click', runSecondLog);
+// ===========Task-03===========
+import { appendItems } from './task-03.js';
+const runThirdLogRef = document.querySelector('.run-third-log');
+const runThirdLog = () => appendItems();
+runThirdLogRef.addEventListener('click', runThirdLog);

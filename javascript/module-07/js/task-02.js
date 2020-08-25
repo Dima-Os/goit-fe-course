@@ -6,7 +6,7 @@ export const ingredients = [
   'Зелень',
   'Приправы',
 ];
-export const galleryRef = document.querySelector('#gallery');
+export const ingredientsRef = document.querySelector('#ingredients');
 
 export const createItem = listItem => {
   const createdIUtem = document.createElement('li');

@@ -31,6 +31,7 @@ body {
 }
 ul {
   margin-left: 20px;
+  text-transform: initial;
 }
 .container {
   max-width: 900px;
@@ -89,6 +90,7 @@ button {
     rgba(0, 176, 255, 1) 100%
   );
   transition: all 200ms linear;
+  margin-bottom: 15px;
 }
 
 .start-function:hover {
@@ -108,4 +110,20 @@ button {
 .task-html {
   text-align: left;
   color: #fff;
+  margin: 0 auto;
+}
+
+ul#gallery {
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul#gallery > li > img {
+  max-width: 270px;
+  height: auto;
+  border: 5px solid rgba(0, 176, 255, 1);
+  border-radius: 50%;
 }
