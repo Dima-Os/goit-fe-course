@@ -46,3 +46,4 @@ function onDeleteClick() {
 
 renderBtnRef.addEventListener("click", onRenderClick);
 destroyBtnRef.addEventListener("click", onDeleteClick);
+/**/
