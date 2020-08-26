@@ -171,3 +171,10 @@ fieldset > h1 {
 #controls > .display {
   padding: 15px 25px;
 }
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+#boxes > div {
+  margin: 5px;
+}
