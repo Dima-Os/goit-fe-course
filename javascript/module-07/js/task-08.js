@@ -1,4 +1,4 @@
-let boxesRef = document.querySelector("#boxes");
+const boxesRef = document.querySelector("#boxes");
 const controlsRef = document.querySelector("#controls");
 const userInputRef = document.querySelector('#controls > input[type="number"]');
 const renderBtnRef = document.querySelector(
@@ -8,41 +8,34 @@ const destroyBtnRef = document.querySelector(
   '#controls > button[data-action="destroy"]'
 );
 
-function generateRandomRgb() {
-  const rgb = [];
-  let i = 0;
-  while (i < 3) {
-    i += 1;
-    rgb.push(parseInt(Math.random() * 255));
-  }
-  return rgb.join(", ");
+let r,
+  g,
+  b = 0;
+const getRundomNum = () => parseInt(Math.random() * 255);
+function createBox(size) {
+  const box = document.createElement("div");
+  box.setAttribute(
+    "style",
+    `width:${size}px; height:${size}px; background-color:rgb(${r},${g},${b})`
+  );
+  return box;
 }
 
 function createBoxes(amount) {
-  let createdDivs = [];
-  while (amount !== 0) {
-    amount -= 1;
-    createdDivs.push(
-      `<div style="
-      width: ${30 + amount * 10}px; 
-      height: ${30 + amount * 10}px;
-      background-color: rgb(${generateRandomRgb()});">
-      </div>`
-    );
+  let createdBoxes = document.createElement("div");
+  for (let i = 1; i <= amount; i += 1) {
+    r = getRundomNum();
+    g = getRundomNum();
+    b = getRundomNum();
+    const size = 30 + i * 10;
+    const createdBox = createBox(size);
+    createdBoxes.append(createdBox);
   }
-  return createdDivs;
+  boxesRef.append(createdBoxes);
+  userInputRef.value = "";
 }
-function onRenderClick() {
-  boxesRef.insertAdjacentHTML(
-    "afterbegin",
-    createBoxes(userInputRef.value).reverse().join("")
-  );
+function onRender(event) {
+  if (event.target === renderBtnRef) createBoxes(+userInputRef.value);
+  else if (event.target === destroyBtnRef) boxesRef.innerHTML = "";
 }
-function onDeleteClick() {
-  boxesRef.remove();
-  controlsRef.insertAdjacentHTML("afterend", '<div id="boxes"></div>');
-  boxesRef = document.querySelector("#boxes");
-}
-
-renderBtnRef.addEventListener("click", onRenderClick);
-destroyBtnRef.addEventListener("click", onDeleteClick);
+controlsRef.addEventListener("click", onRender);
