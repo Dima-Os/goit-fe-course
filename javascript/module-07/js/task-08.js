@@ -10,10 +10,7 @@ const destroyBtnRef = document.querySelector(
 
 function getRundomColor() {
   const getRundomNum = () => parseInt(Math.random() * 255);
-  const r = getRundomNum();
-  const g = getRundomNum();
-  const b = getRundomNum();
-  return `rgb(${r},${g},${b})`;
+  return `rgb(${getRundomNum()},${getRundomNum()},${getRundomNum()})`;
 }
 
 function createBox(size) {
@@ -35,9 +32,13 @@ function createBoxes(amount) {
   boxesRef.append(createdBoxes);
   userInputRef.value = '';
 }
-function onRender(event) {
-  if (event.target === renderBtnRef) createBoxes(+userInputRef.value);
-  else if (event.target === destroyBtnRef) boxesRef.innerHTML = '';
+function onRender() {
+  createBoxes(+userInputRef.value);
 }
 
-controlsRef.addEventListener('click', onRender);
+function onDestroy() {
+  boxesRef.innerHTML = '';
+}
+
+renderBtnRef.addEventListener('click', onRender);
+destroyBtnRef.addEventListener('click', onDestroy);
