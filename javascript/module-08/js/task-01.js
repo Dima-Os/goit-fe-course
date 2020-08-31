@@ -47,7 +47,6 @@ function next() {
 function previous() {
   if (currentIndex < 1) return;
   --currentIndex;
-  console.log(currentIndex);
 }
 
 function arrowHendler(event) {
