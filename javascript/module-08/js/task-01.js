@@ -40,7 +40,6 @@ function escHendler(event) {
 function next() {
   if (currentIndex > galleryItems.length - 2) return;
   ++currentIndex;
-  console.log(currentIndex);
 }
 
 function previous() {
