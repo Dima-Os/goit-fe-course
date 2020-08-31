@@ -4,7 +4,9 @@ const refs = {
   lightboxImage: document.querySelector('.lightbox__image'),
   closeButton: document.querySelector('button[data-action="close-lightbox"]'),
 };
+
 let currentIndex = 0;
+
 import galleryItems from './gallery-items.js';
 
 function createGalleryItem(element, index) {
