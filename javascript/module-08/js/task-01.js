@@ -42,13 +42,13 @@ function escHendler(event) {
 }
 
 function next() {
-  if (currentIndex > galleryItems.length - 2) return;
+  if (currentIndex > galleryItems.length - 2) currentIndex = -1;
   ++currentIndex;
   refs.lightboxImage.src = galleryItems[currentIndex].original;
 }
 
 function previous() {
-  if (currentIndex < 1) return;
+  if (currentIndex < 1) currentIndex = galleryItems.length;
   --currentIndex;
   refs.lightboxImage.src = galleryItems[currentIndex].original;
 }
