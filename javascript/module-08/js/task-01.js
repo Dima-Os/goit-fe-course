@@ -7,8 +7,6 @@ const refs = {
   rightButton: document.querySelector('.right'),
 };
 
-let currentIndex = 0;
-
 import galleryItems from './gallery-items.js';
 
 function createElement(name, attr = {}) {
@@ -21,18 +19,20 @@ function createElement(name, attr = {}) {
 
 function createGalleryItem(element, index) {
   const galleryItem = createElement('li', { class: 'gallery__item' });
-  const itemLink = createElement('a', {
+  const linkAttributes = {
     class: 'gallery__link',
     href: `${element.original}`,
-  });
+  };
+  const itemLink = createElement('a', linkAttributes);
   galleryItem.appendChild(itemLink);
-  const galleryImage = createElement('img', {
+  const imgAttributes = {
     class: 'gallery__image',
     src: `${element.preview}`,
     'data-source': `${element.original}`,
     alt: `${element.description}`,
     'data-index': `${index}`,
-  });
+  };
+  const galleryImage = createElement('img', imgAttributes);
   itemLink.appendChild(galleryImage);
   return galleryItem;
 }
@@ -45,32 +45,31 @@ function renderGalleryItems() {
   refs.gallery.append(...createGalleryItems(galleryItems));
 }
 
-function next(/*event*/) {
-  if (currentIndex > galleryItems.length - 2) currentIndex = -1;
-  ++currentIndex;
-  refs.lightboxImage.src = galleryItems[currentIndex].original;
-  // refs.lightboxImage.src =
-  //   event.target.parentElement.nextSibling.children[0].href;
+function next() {
+  const currentIndex = galleryItems.findIndex(
+    element => element.original === refs.lightboxImage.src,
+  );
+  refs.lightboxImage.src =
+    currentIndex < galleryItems.length - 1
+      ? galleryItems[currentIndex + 1].original
+      : galleryItems[0].original;
 }
 
-function previous(/*event*/) {
-  if (currentIndex < 1) currentIndex = galleryItems.length;
-  --currentIndex;
-  refs.lightboxImage.src = galleryItems[currentIndex].original;
+function previous() {
+  const currentIndex = galleryItems.findIndex(
+    element => element.original === refs.lightboxImage.src,
+  );
+  refs.lightboxImage.src =
+    currentIndex === 0
+      ? galleryItems[galleryItems.length - 1].original
+      : galleryItems[currentIndex - 1].original;
 }
 
 function keyBoardHendler(event) {
-  switch (event.code) {
-    case 'ArrowRight':
-      next(event);
-      break;
-    case 'ArrowLeft':
-      previous();
-      break;
-    case 'Escape':
-      onCloseButton();
-      break;
-  }
+  const pushedKey = event.code;
+  if (pushedKey === 'ArrowRight') next();
+  if (pushedKey === 'ArrowLeft') previous();
+  if (pushedKey === 'Escape') onCloseButton();
 }
 
 function onClickImage(event) {
@@ -81,7 +80,6 @@ function onClickImage(event) {
     refs.lightboxImage.src = event.target.dataset.source;
     refs.lightboxImage.alt = event.target.alt;
   }
-  currentIndex = +event.target.dataset.index;
 }
 
 function onCloseButton() {
