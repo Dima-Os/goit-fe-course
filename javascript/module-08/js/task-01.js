@@ -45,13 +45,15 @@ function renderGalleryItems() {
   refs.gallery.append(...createGalleryItems(galleryItems));
 }
 
-function next() {
+function next(/*event*/) {
   if (currentIndex > galleryItems.length - 2) currentIndex = -1;
   ++currentIndex;
   refs.lightboxImage.src = galleryItems[currentIndex].original;
+  // refs.lightboxImage.src =
+  //   event.target.parentElement.nextSibling.children[0].href;
 }
 
-function previous() {
+function previous(/*event*/) {
   if (currentIndex < 1) currentIndex = galleryItems.length;
   --currentIndex;
   refs.lightboxImage.src = galleryItems[currentIndex].original;
@@ -60,7 +62,7 @@ function previous() {
 function keyBoardHendler(event) {
   switch (event.code) {
     case 'ArrowRight':
-      next();
+      next(event);
       break;
     case 'ArrowLeft':
       previous();
@@ -94,10 +96,9 @@ function onLightboxClick(event) {
 }
 
 refs.closeButton.addEventListener('click', onCloseButton);
-refs.gallery.addEventListener('click', onClickImage);
 refs.lightbox.addEventListener('click', onLightboxClick);
 refs.leftButton.addEventListener('click', previous);
 refs.rightButton.addEventListener('click', next);
-renderGalleryItems();
+refs.gallery.addEventListener('click', onClickImage);
 
-console.dir(refs.gallery);
+renderGalleryItems();
